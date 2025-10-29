@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef } from "react"
 
-import { cn } from "@amber/ui/lib"
+import { cn } from "../../lib/utils"
 
 export interface AnimatedGradientTextProps
   extends ComponentPropsWithoutRef<"div"> {

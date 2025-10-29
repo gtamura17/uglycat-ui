@@ -2,9 +2,9 @@
 "use client"
 
 import { ElementType, memo } from "react"
-import { AnimatePresence, motion, MotionProps, Variants } from "motion/react"
+import { AnimatePresence, motion, MotionProps, Variants } from "framer-motion"
 
-import { cn } from "@amber/ui/lib"
+import { cn } from "../../lib/utils"
 
 type AnimationType = "text" | "word" | "character" | "line"
 type AnimationVariant =

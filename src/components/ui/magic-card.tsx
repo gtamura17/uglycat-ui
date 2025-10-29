@@ -2,9 +2,9 @@
 "use client"
 
 import React, { useCallback, useEffect } from "react"
-import { motion, useMotionTemplate, useMotionValue } from "motion/react"
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion"
 
-import { cn } from "@amber/ui/lib"
+import { cn } from "../../lib/utils"
 
 interface MagicCardProps {
   children?: React.ReactNode

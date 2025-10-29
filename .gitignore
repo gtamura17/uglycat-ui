@@ -84,3 +84,5 @@ out/
 # TypeScript
 *.tsbuildinfo
 
+
+*storybook.log

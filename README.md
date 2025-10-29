@@ -1,270 +1,191 @@
-# @amber/ui
+# @amber-ai/ui
 
-> Design System based on Shadcn/ui + Radix UI
+Premium UI Components Library - Built with shadcn/ui and Magic UI
 
-## 🎨 Design System
+## 🎨 Overview
 
-**Dark premium theme** inspired by gtamura.com:
-- Background: `#0a0a0a`
-- Accents: Cyan (`#22d3ee`), Purple (`#9C7DFF`)
-- Typography: Inter (sans-serif)
-- Tone: Professional enterprise (not cartoon/futuristic)
+@amber-ai/ui is a comprehensive React component library that provides beautiful, accessible, and customizable UI components. Built on top of Radix UI primitives and styled with Tailwind CSS, it offers a complete design system for modern web applications.
 
----
+## ✨ Features
+
+- 🎯 **67+ Components** - Complete set of UI components
+- 🎨 **Beautiful Design** - Premium components with Magic UI effects
+- ♿ **Accessible** - Built on Radix UI primitives
+- 🎨 **Customizable** - Tailwind CSS styling with CSS variables
+- 📱 **Responsive** - Mobile-first design approach
+- 🔧 **TypeScript** - Full TypeScript support
+- 🧪 **Tested** - Comprehensive test coverage
+- 📦 **Tree-shakable** - Optimized bundle size
+
+## 📦 Installation
+
+```bash
+pnpm add @amber-ai/ui
+```
 
 ## 🚀 Quick Start
 
-### Import Components
-
-```tsx
-import { 
-  Button, 
-  Card, 
-  CardCompound,
-  Input, 
-  Dialog, 
-  DialogCompound,
-  ShimmerButton,
-  MagicCard 
-} from '@amber/ui'
+1. **Install dependencies:**
+```bash
+pnpm add @amber-ai/ui tailwindcss @radix-ui/react-accordion
 ```
 
-### Basic Usage
+2. **Add to your Tailwind config:**
+```javascript
+// tailwind.config.js
+module.exports = {
+  content: [
+    "./node_modules/@amber-ai/ui/dist/**/*.{js,ts,jsx,tsx}",
+    // ... your other content paths
+  ],
+  theme: {
+    extend: {
+      // ... your theme extensions
+    },
+  },
+  plugins: [
+    require("tailwindcss-animate"),
+    // ... your other plugins
+  ],
+}
+```
 
+3. **Import and use components:**
 ```tsx
+import { Button, Card, Input } from "@amber-ai/ui"
+
 export function MyComponent() {
   return (
-    <CardCompound.Root variant="glass">
-      <CardCompound.Header>
-        <CardCompound.Title>Premium Card</CardCompound.Title>
-      </CardCompound.Header>
-      <CardCompound.Content>
-        <Input placeholder="Enter text" />
-        <Button variant="gradient" size="lg">Submit</Button>
-      </CardCompound.Content>
-    </CardCompound.Root>
+    <Card>
+      <Input placeholder="Enter your name" />
+      <Button>Submit</Button>
+    </Card>
   )
 }
 ```
 
-### Premium Variants
+## 📚 Components
 
-```tsx
-// Button with loading state
-<Button variant="glow" loading>Processing...</Button>
+### Basic Components
+- **Button** - Various button styles and variants
+- **Input** - Form input components
+- **Label** - Accessible form labels
+- **Textarea** - Multi-line text input
+- **Checkbox** - Checkbox input component
+- **Radio Group** - Radio button groups
+- **Switch** - Toggle switch component
+- **Slider** - Range slider component
+- **Progress** - Progress indicator
+- **Skeleton** - Loading skeleton components
 
-// Card with glass effect
-<CardCompound.Root variant="glass">
-  <CardCompound.Header>
-    <CardCompound.Title>Glass Card</CardCompound.Title>
-  </CardCompound.Header>
-</CardCompound.Root>
+### Layout Components
+- **Card** - Container component
+- **Separator** - Visual divider
+- **Scroll Area** - Custom scrollable area
+- **Sheet** - Slide-out panel
+- **Drawer** - Mobile-friendly drawer
+- **Tabs** - Tab navigation
 
-// Magic UI Components
-<ShimmerButton>Premium Button</ShimmerButton>
-<MagicCard>Interactive Magic</MagicCard>
-```
+### Overlay Components
+- **Dialog** - Modal dialog
+- **Popover** - Floating content
+- **Tooltip** - Contextual information
+- **Hover Card** - Hover-triggered content
+- **Alert Dialog** - Confirmation dialogs
+- **Context Menu** - Right-click menu
+- **Dropdown Menu** - Action menu
 
----
+### Data Display
+- **Avatar** - User profile images
+- **Badge** - Status indicators
+- **Accordion** - Collapsible content
+- **Alert** - Notification messages
 
-## 📦 Components (37+)
+### Premium Components
+- **Animated Beam** - Animated connection lines
+- **Animated Gradient Text** - Gradient text animations
+- **Border Beam** - Animated borders
+- **Magic Card** - Interactive card effects
+- **Neon Gradient Card** - Neon-styled cards
+- **Particles** - Particle effects
+- **Rainbow Button** - Rainbow animated button
+- **Shimmer Button** - Shimmer effect button
+- **Shiny Button** - Shiny animated button
+- **Text Animate** - Text animation effects
 
-### Shadcn Base (18 componentes)
-- Button (8 variants: default, gradient, glass, glow, + loading)
-- Input, Textarea, Label
-- Checkbox, Radio Group, Switch, Slider
-- Select, Badge, Avatar, Separator
-- **Skeleton** (Loading placeholder)
-- **Progress** (Linear & circular)
-- **Hover Card** (Rich tooltip)
-- **Scroll Area** (Custom scrollbar)
-- **Form** (React Hook Form integration)
-- Tooltip
+## 🎨 Styling
 
-### Magic UI Premium (10 componentes)
-- **ShimmerButton** - Animated shimmer effect
-- **RainbowButton** - Animated rainbow gradient
-- **ShinyButton** - Shiny hover effect
-- **MagicCard** - Interactive card with glow
-- **BorderBeam** - Animated border beam
-- **NeonGradientCard** - Neon gradient effects
-- **AnimatedGradientText** - Gradient text animation
-- **TextAnimate** - Text animation effects
-- **Particles** - Particle background
-- **AnimatedBeam** - Animated beam connections
-
-### Tier 2 Composition (9 componentes)
-- Dialog, Drawer, Sheet
-- Dropdown Menu, Context Menu
-- Tabs, Accordion, Popover
-- Alert
-
-### Layout
-- Card
-- Separator
-- Scroll Area
-- Aspect Ratio
-
-### Forms
-- Input
-- Textarea
-- Select
-- Checkbox
-- Radio Group
-- Switch
-- Slider
-- Form (React Hook Form integration)
-
-### Buttons
-- Button
-- Toggle
-- Toggle Group
-
-### Overlay
-- Dialog
-- Alert Dialog
-- Sheet
-- Popover
-- Dropdown Menu
-- Context Menu
-- Tooltip
-- Hover Card
-
-### Feedback
-- Alert
-- Toast
-- Badge
-- Progress
-- Skeleton
-
-### Navigation
-- Tabs
-- Navigation Menu
-- Breadcrumb
-- Pagination
-
-### Display
-- Avatar
-- Table
-- Accordion
-- Collapsible
-
----
-
-## 🎨 Customization
-
-### Theme
-
-```typescript
-// tailwind.config.ts
-export default {
-  theme: {
-    extend: {
-      colors: {
-        background: '#0a0a0a',
-        foreground: '#eaeaea',
-        primary: {
-          DEFAULT: '#22d3ee',
-          foreground: '#0a0a0a',
-        },
-        secondary: {
-          DEFAULT: '#9C7DFF',
-          foreground: '#ffffff',
-        },
-      },
-    },
-  },
-}
-```
-
-### CSS Variables
+Components use CSS variables for theming. You can customize the appearance by overriding these variables:
 
 ```css
 :root {
-  --background: 0 0% 4%;
-  --foreground: 0 0% 92%;
-  --primary: 186 82% 53%;
-  --secondary: 258 83% 73%;
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  /* ... more variables */
 }
 ```
 
----
+## 🧪 Testing
 
-## ♿ Accessibility
+```bash
+# Run tests
+pnpm test
 
-All components follow **WAI-ARIA** standards:
-- Keyboard navigation
-- Screen reader support
-- Focus management
-- ARIA attributes
+# Run tests with UI
+pnpm test:ui
 
-**Color contrast:** Minimum 4.5:1 ratio
-**Touch targets:** Minimum 44px
-
----
-
-## 📱 Responsive Design
-
-**Mobile-first approach:**
-- Breakpoints: sm (640px), md (768px), lg (1024px), xl (1280px)
-- Fluid typography
-- Touch-friendly targets
-
----
-
-## 🚀 Performance
-
-- **Tree-shaking:** Only import what you use
-- **Code splitting:** Components load on-demand
-- **Bundle size:** ~97KB (minified, ESM)
-
-### Actual Bundle Size
-- ESM: 87KB
-- CJS: 96.50KB
-- CSS: 5.01KB
-- Types: 34KB
-
----
+# Type checking
+pnpm type-check
+```
 
 ## 🛠️ Development
 
-### Adding Components
-
 ```bash
-# Use Shadcn CLI
-npx shadcn@latest add button
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm dev
+
+# Build library
+pnpm build
+
+# Lint code
+pnpm lint
 ```
 
-### Custom Component
+## 📁 Project Structure
 
-```tsx
-// src/components/custom-button.tsx
-import { Button } from './button'
-import { cva, type VariantProps } from 'class-variance-authority'
-
-const customButtonVariants = cva(
-  'base-styles',
-  {
-    variants: {
-      variant: {
-        primary: 'bg-primary',
-        secondary: 'bg-secondary',
-      },
-    },
-  }
-)
-
-export interface CustomButtonProps extends VariantProps<typeof customButtonVariants> {}
-
-export function CustomButton({ variant, ...props }: CustomButtonProps) {
-  return <Button className={customButtonVariants({ variant })} {...props} />
-}
+```
+src/
+├── components/
+│   ├── ui/           # Core UI components
+│   └── premium/      # Premium animated components
+├── hooks/            # Custom React hooks
+├── lib/              # Utility functions
+└── styles/           # Global styles
 ```
 
----
+## 🤝 Contributing
 
-## 📚 Links
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
 
-- [Shadcn/ui Docs](https://ui.shadcn.com)
-- [Radix UI Docs](https://radix-ui.com)
-- [Tailwind CSS](https://tailwindcss.com)
+## 📄 License
+
+MIT License - see LICENSE file for details.
+
+## 🔗 Links
+
+- [Documentation](https://amber-ai-ui.vercel.app)
+- [Storybook](https://amber-ai-ui-storybook.vercel.app)
+- [GitHub](https://github.com/gtamura17/amber-ai-ui)
+
+## 🆘 Support
+
+For support and questions, please open an issue in the repository.

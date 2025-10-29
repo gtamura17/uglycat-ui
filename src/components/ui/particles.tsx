@@ -8,7 +8,7 @@ import React, {
   useState,
 } from "react"
 
-import { cn } from "@amber/ui/lib"
+import { cn } from "../../lib/utils"
 
 interface MousePosition {
   x: number
