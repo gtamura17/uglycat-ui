@@ -1,145 +1,270 @@
-# Amber AI
+# @amber/ui
 
-Intelligent Automation Platform - Standalone Project
+> Design System based on Shadcn/ui + Radix UI
 
-## 🚀 Overview
+## 🎨 Design System
 
-Amber AI is a comprehensive intelligent automation platform that provides AI-powered solutions for businesses. This standalone project contains all the necessary components to run Amber AI independently.
+**Dark premium theme** inspired by gtamura.com:
+- Background: `#0a0a0a`
+- Accents: Cyan (`#22d3ee`), Purple (`#9C7DFF`)
+- Typography: Inter (sans-serif)
+- Tone: Professional enterprise (not cartoon/futuristic)
 
-## 📁 Project Structure
+---
 
+## 🚀 Quick Start
+
+### Import Components
+
+```tsx
+import { 
+  Button, 
+  Card, 
+  CardCompound,
+  Input, 
+  Dialog, 
+  DialogCompound,
+  ShimmerButton,
+  MagicCard 
+} from '@amber/ui'
 ```
-amber-ai/
-├── app/                    # Next.js app directory
-├── src/                    # Source code
-├── packages/
-│   ├── amber/             # Amber-specific packages
-│   │   ├── config/        # Configuration management
-│   │   ├── database/      # Database schema and migrations
-│   │   └── lib/           # Core libraries
-│   └── shared/            # Shared packages
-│       ├── types/         # TypeScript type definitions
-│       ├── ui/            # UI components library
-│       └── utils/         # Utility functions
-├── tests/                 # Test files
-└── docs/                  # Documentation
+
+### Basic Usage
+
+```tsx
+export function MyComponent() {
+  return (
+    <CardCompound.Root variant="glass">
+      <CardCompound.Header>
+        <CardCompound.Title>Premium Card</CardCompound.Title>
+      </CardCompound.Header>
+      <CardCompound.Content>
+        <Input placeholder="Enter text" />
+        <Button variant="gradient" size="lg">Submit</Button>
+      </CardCompound.Content>
+    </CardCompound.Root>
+  )
+}
 ```
 
-## 🛠️ Tech Stack
+### Premium Variants
 
-- **Framework**: Next.js 14
-- **Language**: TypeScript
-- **Database**: PostgreSQL with Prisma ORM
-- **UI**: Radix UI + Tailwind CSS
-- **Testing**: Vitest
-- **Package Manager**: pnpm
+```tsx
+// Button with loading state
+<Button variant="glow" loading>Processing...</Button>
 
-## 🚀 Getting Started
+// Card with glass effect
+<CardCompound.Root variant="glass">
+  <CardCompound.Header>
+    <CardCompound.Title>Glass Card</CardCompound.Title>
+  </CardCompound.Header>
+</CardCompound.Root>
 
-### Prerequisites
+// Magic UI Components
+<ShimmerButton>Premium Button</ShimmerButton>
+<MagicCard>Interactive Magic</MagicCard>
+```
 
-- Node.js 18+
-- pnpm 8+
-- PostgreSQL database
+---
 
-### Installation
+## 📦 Components (37+)
 
-1. Clone the repository:
+### Shadcn Base (18 componentes)
+- Button (8 variants: default, gradient, glass, glow, + loading)
+- Input, Textarea, Label
+- Checkbox, Radio Group, Switch, Slider
+- Select, Badge, Avatar, Separator
+- **Skeleton** (Loading placeholder)
+- **Progress** (Linear & circular)
+- **Hover Card** (Rich tooltip)
+- **Scroll Area** (Custom scrollbar)
+- **Form** (React Hook Form integration)
+- Tooltip
+
+### Magic UI Premium (10 componentes)
+- **ShimmerButton** - Animated shimmer effect
+- **RainbowButton** - Animated rainbow gradient
+- **ShinyButton** - Shiny hover effect
+- **MagicCard** - Interactive card with glow
+- **BorderBeam** - Animated border beam
+- **NeonGradientCard** - Neon gradient effects
+- **AnimatedGradientText** - Gradient text animation
+- **TextAnimate** - Text animation effects
+- **Particles** - Particle background
+- **AnimatedBeam** - Animated beam connections
+
+### Tier 2 Composition (9 componentes)
+- Dialog, Drawer, Sheet
+- Dropdown Menu, Context Menu
+- Tabs, Accordion, Popover
+- Alert
+
+### Layout
+- Card
+- Separator
+- Scroll Area
+- Aspect Ratio
+
+### Forms
+- Input
+- Textarea
+- Select
+- Checkbox
+- Radio Group
+- Switch
+- Slider
+- Form (React Hook Form integration)
+
+### Buttons
+- Button
+- Toggle
+- Toggle Group
+
+### Overlay
+- Dialog
+- Alert Dialog
+- Sheet
+- Popover
+- Dropdown Menu
+- Context Menu
+- Tooltip
+- Hover Card
+
+### Feedback
+- Alert
+- Toast
+- Badge
+- Progress
+- Skeleton
+
+### Navigation
+- Tabs
+- Navigation Menu
+- Breadcrumb
+- Pagination
+
+### Display
+- Avatar
+- Table
+- Accordion
+- Collapsible
+
+---
+
+## 🎨 Customization
+
+### Theme
+
+```typescript
+// tailwind.config.ts
+export default {
+  theme: {
+    extend: {
+      colors: {
+        background: '#0a0a0a',
+        foreground: '#eaeaea',
+        primary: {
+          DEFAULT: '#22d3ee',
+          foreground: '#0a0a0a',
+        },
+        secondary: {
+          DEFAULT: '#9C7DFF',
+          foreground: '#ffffff',
+        },
+      },
+    },
+  },
+}
+```
+
+### CSS Variables
+
+```css
+:root {
+  --background: 0 0% 4%;
+  --foreground: 0 0% 92%;
+  --primary: 186 82% 53%;
+  --secondary: 258 83% 73%;
+}
+```
+
+---
+
+## ♿ Accessibility
+
+All components follow **WAI-ARIA** standards:
+- Keyboard navigation
+- Screen reader support
+- Focus management
+- ARIA attributes
+
+**Color contrast:** Minimum 4.5:1 ratio
+**Touch targets:** Minimum 44px
+
+---
+
+## 📱 Responsive Design
+
+**Mobile-first approach:**
+- Breakpoints: sm (640px), md (768px), lg (1024px), xl (1280px)
+- Fluid typography
+- Touch-friendly targets
+
+---
+
+## 🚀 Performance
+
+- **Tree-shaking:** Only import what you use
+- **Code splitting:** Components load on-demand
+- **Bundle size:** ~97KB (minified, ESM)
+
+### Actual Bundle Size
+- ESM: 87KB
+- CJS: 96.50KB
+- CSS: 5.01KB
+- Types: 34KB
+
+---
+
+## 🛠️ Development
+
+### Adding Components
+
 ```bash
-git clone <repository-url>
-cd amber-ai
+# Use Shadcn CLI
+npx shadcn@latest add button
 ```
 
-2. Install dependencies:
-```bash
-pnpm install
+### Custom Component
+
+```tsx
+// src/components/custom-button.tsx
+import { Button } from './button'
+import { cva, type VariantProps } from 'class-variance-authority'
+
+const customButtonVariants = cva(
+  'base-styles',
+  {
+    variants: {
+      variant: {
+        primary: 'bg-primary',
+        secondary: 'bg-secondary',
+      },
+    },
+  }
+)
+
+export interface CustomButtonProps extends VariantProps<typeof customButtonVariants> {}
+
+export function CustomButton({ variant, ...props }: CustomButtonProps) {
+  return <Button className={customButtonVariants({ variant })} {...props} />
+}
 ```
 
-3. Set up environment variables:
-```bash
-cp .env.example .env.local
-# Edit .env.local with your configuration
-```
+---
 
-4. Set up the database:
-```bash
-pnpm db:generate
-pnpm db:push
-```
+## 📚 Links
 
-5. Run the development server:
-```bash
-pnpm dev
-```
-
-## 📝 Available Scripts
-
-- `pnpm dev` - Start development server
-- `pnpm build` - Build for production
-- `pnpm start` - Start production server
-- `pnpm lint` - Run ESLint
-- `pnpm test` - Run tests
-- `pnpm test:ui` - Run tests with UI
-- `pnpm type-check` - Run TypeScript type checking
-- `pnpm db:generate` - Generate Prisma client
-- `pnpm db:push` - Push database schema
-- `pnpm db:migrate` - Run database migrations
-- `pnpm db:studio` - Open Prisma Studio
-
-## 🏗️ Architecture
-
-Amber AI follows a modular architecture with clear separation of concerns:
-
-- **Frontend**: Next.js application with React components
-- **Backend**: API routes and server-side logic
-- **Database**: PostgreSQL with Prisma ORM
-- **UI Components**: Reusable component library
-- **Configuration**: Centralized configuration management
-
-## 📦 Packages
-
-### Amber Packages
-- `@amber/config` - Configuration management
-- `@amber/database` - Database schema and operations
-- `@amber/lib` - Core business logic
-
-### Shared Packages
-- `@shared/types` - TypeScript type definitions
-- `@shared/ui` - UI component library
-- `@shared/utils` - Utility functions
-
-## 🔧 Configuration
-
-Configuration is managed through environment variables and the `@amber/config` package. See `.env.example` for required variables.
-
-## 🧪 Testing
-
-Tests are written using Vitest and can be run with:
-```bash
-pnpm test
-```
-
-For UI testing:
-```bash
-pnpm test:ui
-```
-
-## 📚 Documentation
-
-Detailed documentation is available in the `docs/` directory.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 🆘 Support
-
-For support and questions, please open an issue in the repository.
+- [Shadcn/ui Docs](https://ui.shadcn.com)
+- [Radix UI Docs](https://radix-ui.com)
+- [Tailwind CSS](https://tailwindcss.com)
