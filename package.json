@@ -1,7 +1,7 @@
 {
-  "name": "@amber-ai/ui",
+  "name": "@uglycat/ui",
   "version": "1.0.0",
-  "description": "Amber AI UI Components Library - Premium design system with shadcn/ui and Magic UI",
+  "description": "Beautiful components from an ugly cat - Premium React UI library with Tailwind CSS and shadcn/ui",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -92,11 +92,13 @@
     "tailwindcss",
     "radix-ui",
     "design-system",
-    "amber-ai"
+    "uglycat",
+    "shadcn-ui",
+    "premium-components"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/gtamura17/amber-ai-ui.git"
+    "url": "https://github.com/gtamura17/uglycat-ui.git"
   },
   "license": "MIT",
   "engines": {
