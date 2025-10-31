@@ -1,64 +1,47 @@
-# @uglycat/ui
+<div align="center">
+  <img src="https://raw.githubusercontent.com/gtamura17/uglycat-ui/master/.github/logo.png" alt="UglyCat UI" width="200"/>
 
-Beautiful components from an ugly cat - Premium React UI library
+  <h1>@uglycat/ui</h1>
+  <p>Beautiful components from an ugly cat ⚡️</p>
 
-## 🎨 Overview
+  <p>
+    <a href="https://www.npmjs.com/package/@uglycat/ui">
+      <img src="https://img.shields.io/npm/v/@uglycat/ui.svg?style=flat" alt="npm version" />
+    </a>
+    <a href="https://github.com/gtamura17/uglycat-ui/blob/master/LICENSE">
+      <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License" />
+    </a>
+  </p>
+</div>
 
-@uglycat/ui is a carefully crafted React component library built on Radix UI primitives and styled with Tailwind CSS. It provides accessible, customizable, and production-ready components for modern web applications.
+## Overview
 
-## ✨ Features
+A premium React component library built on Radix UI primitives and styled with Tailwind CSS. @uglycat/ui provides accessible, customizable, and production-ready components for modern web applications.
 
-- 🎯 **67+ Components** - Complete set of production-ready UI components
-- 🎨 **Beautiful Design** - Premium components with modern aesthetics
-- ♿ **Accessible** - Built on Radix UI primitives with ARIA support
-- 🎨 **Customizable** - Tailwind CSS with CSS variables theming
-- 📱 **Responsive** - Mobile-first design approach
-- 🔧 **TypeScript** - Full type safety and IntelliSense support
-- 🧪 **Tested** - Comprehensive test coverage with Vitest
-- 📦 **Tree-shakable** - Optimized bundle size with ESM support
+## Documentation
 
-## 📦 Installation
+For full documentation, visit [uglycat-ui docs](https://github.com/gtamura17/uglycat-ui).
+
+## Installation
 
 ```bash
-pnpm add @uglycat/ui
-# or
+# npm
 npm install @uglycat/ui
-# or
+
+# yarn
 yarn add @uglycat/ui
+
+# pnpm
+pnpm add @uglycat/ui
 ```
 
-## 🚀 Quick Start
+## Usage
 
-1. **Install dependencies:**
-```bash
-pnpm add @uglycat/ui tailwindcss
-```
-
-2. **Configure Tailwind CSS:**
-```javascript
-// tailwind.config.js
-module.exports = {
-  content: [
-    "./node_modules/@uglycat/ui/dist/**/*.{js,ts,jsx,tsx}",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [require("tailwindcss-animate")],
-}
-```
-
-3. **Import styles in your app:**
-```tsx
-import "@uglycat/ui/styles"
-```
-
-4. **Use components:**
 ```tsx
 import { Button, Card, Input } from "@uglycat/ui"
+import "@uglycat/ui/styles"
 
-export function MyComponent() {
+export function App() {
   return (
     <Card>
       <Input placeholder="Enter your name" />
@@ -68,129 +51,42 @@ export function MyComponent() {
 }
 ```
 
-## 📚 Components
+Configure Tailwind CSS:
 
-### Basic Components
-- **Button** - Various button styles and variants
-- **Input** - Form input components
-- **Label** - Accessible form labels
-- **Textarea** - Multi-line text input
-- **Checkbox** - Checkbox input component
-- **Radio Group** - Radio button groups
-- **Switch** - Toggle switch component
-- **Slider** - Range slider component
-- **Progress** - Progress indicator
-- **Skeleton** - Loading skeleton components
-
-### Layout Components
-- **Card** - Container component
-- **Separator** - Visual divider
-- **Scroll Area** - Custom scrollable area
-- **Sheet** - Slide-out panel
-- **Drawer** - Mobile-friendly drawer
-- **Tabs** - Tab navigation
-
-### Overlay Components
-- **Dialog** - Modal dialog
-- **Popover** - Floating content
-- **Tooltip** - Contextual information
-- **Hover Card** - Hover-triggered content
-- **Alert Dialog** - Confirmation dialogs
-- **Context Menu** - Right-click menu
-- **Dropdown Menu** - Action menu
-
-### Data Display
-- **Avatar** - User profile images
-- **Badge** - Status indicators
-- **Accordion** - Collapsible content
-- **Alert** - Notification messages
-
-### Premium Components
-- **Animated Beam** - Animated connection lines
-- **Animated Gradient Text** - Gradient text animations
-- **Border Beam** - Animated borders
-- **Magic Card** - Interactive card effects
-- **Neon Gradient Card** - Neon-styled cards
-- **Particles** - Particle effects
-- **Rainbow Button** - Rainbow animated button
-- **Shimmer Button** - Shimmer effect button
-- **Shiny Button** - Shiny animated button
-- **Text Animate** - Text animation effects
-
-## 🎨 Theming
-
-Components use CSS variables for theming. Customize by overriding variables:
-
-```css
-:root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
-  --primary: 222.2 47.4% 11.2%;
-  --primary-foreground: 210 40% 98%;
-}
-
-.dark {
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
+```javascript
+// tailwind.config.js
+module.exports = {
+  content: [
+    "./node_modules/@uglycat/ui/dist/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  plugins: [require("tailwindcss-animate")],
 }
 ```
 
-## 🧪 Development
+## Features
 
-```bash
-# Install dependencies
-pnpm install
+- 🎯 **67+ Components** - Complete set of production-ready UI components
+- ♿ **Accessible** - Built on Radix UI primitives with ARIA support
+- 🎨 **Customizable** - Tailwind CSS with CSS variables theming
+- 📦 **Tree-shakable** - Optimized bundle size with ESM support
+- 🔧 **TypeScript** - Full type safety and IntelliSense support
+- 📱 **Responsive** - Mobile-first design approach
 
-# Build library
-pnpm build
+## Components
 
-# Run tests
-pnpm test
+**Basic Components**: Button, Input, Label, Textarea, Checkbox, Radio Group, Switch, Slider, Progress, Skeleton
 
-# Type checking
-pnpm type-check
+**Layout Components**: Card, Separator, Scroll Area, Sheet, Drawer, Tabs
 
-# Lint
-pnpm lint
-```
+**Overlay Components**: Dialog, Popover, Tooltip, Hover Card, Alert Dialog, Context Menu, Dropdown Menu
 
-## 📁 Project Structure
+**Premium Components**: Animated Beam, Animated Gradient Text, Border Beam, Magic Card, Neon Gradient Card, Particles, Rainbow Button, Shimmer Button, Shiny Button, Text Animate
 
-```
-src/
-├── components/
-│   ├── ui/           # Core UI components (shadcn/ui)
-│   └── premium/      # Premium animated components
-├── hooks/            # Custom React hooks
-├── lib/              # Utility functions
-└── styles/           # Global styles
-```
+## Contributing
 
-## 🤝 Contributing
+Contributions are welcome! Please read our [contributing guidelines](CONTRIBUTING.md) first.
 
-Contributions are welcome! Please:
+## License
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes with tests
-4. Commit your changes (`git commit -m 'Add amazing feature'`)
-5. Push to the branch (`git push origin feature/amazing-feature`)
-6. Open a Pull Request
-
-## 📄 License
-
-MIT License - see LICENSE file for details.
-
-## 🔗 Links
-
-- [GitHub Repository](https://github.com/gtamura17/uglycat-ui)
-- [Report Issues](https://github.com/gtamura17/uglycat-ui/issues)
-
-## 👨‍💻 Author
-
-**Gabriel Tamura**
-- GitHub: [@gtamura17](https://github.com/gtamura17)
-
----
-
-Built with ❤️ by an ugly cat
+MIT © [Gabriel Tamura](https://github.com/gtamura17)
