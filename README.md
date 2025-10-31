@@ -6,10 +6,16 @@
 
   <p>
     <a href="https://www.npmjs.com/package/@uglycat/ui">
-      <img src="https://img.shields.io/npm/v/@uglycat/ui.svg?style=flat" alt="npm version" />
+      <img src="https://img.shields.io/npm/v/@uglycat/ui.svg?style=flat&colorA=000000&colorB=000000" alt="npm version" />
+    </a>
+    <a href="https://www.npmjs.com/package/@uglycat/ui">
+      <img src="https://img.shields.io/npm/dm/@uglycat/ui.svg?style=flat&colorA=000000&colorB=000000" alt="npm downloads" />
     </a>
     <a href="https://github.com/gtamura17/uglycat-ui/blob/master/LICENSE">
-      <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License" />
+      <img src="https://img.shields.io/badge/license-MIT-000000.svg?style=flat&colorA=000000&colorB=000000" alt="MIT License" />
+    </a>
+    <a href="https://github.com/gtamura17/uglycat-ui">
+      <img src="https://img.shields.io/github/stars/gtamura17/uglycat-ui?style=flat&colorA=000000&colorB=000000" alt="GitHub stars" />
     </a>
   </p>
 </div>
