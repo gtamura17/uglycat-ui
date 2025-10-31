@@ -1,58 +1,62 @@
-# @amber-ai/ui
+# @uglycat/ui
 
-Premium UI Components Library - Built with shadcn/ui and Magic UI
+Beautiful components from an ugly cat - Premium React UI library
 
 ## 🎨 Overview
 
-@amber-ai/ui is a comprehensive React component library that provides beautiful, accessible, and customizable UI components. Built on top of Radix UI primitives and styled with Tailwind CSS, it offers a complete design system for modern web applications.
+@uglycat/ui is a carefully crafted React component library built on Radix UI primitives and styled with Tailwind CSS. It provides accessible, customizable, and production-ready components for modern web applications.
 
 ## ✨ Features
 
-- 🎯 **67+ Components** - Complete set of UI components
-- 🎨 **Beautiful Design** - Premium components with Magic UI effects
-- ♿ **Accessible** - Built on Radix UI primitives
-- 🎨 **Customizable** - Tailwind CSS styling with CSS variables
+- 🎯 **67+ Components** - Complete set of production-ready UI components
+- 🎨 **Beautiful Design** - Premium components with modern aesthetics
+- ♿ **Accessible** - Built on Radix UI primitives with ARIA support
+- 🎨 **Customizable** - Tailwind CSS with CSS variables theming
 - 📱 **Responsive** - Mobile-first design approach
-- 🔧 **TypeScript** - Full TypeScript support
-- 🧪 **Tested** - Comprehensive test coverage
-- 📦 **Tree-shakable** - Optimized bundle size
+- 🔧 **TypeScript** - Full type safety and IntelliSense support
+- 🧪 **Tested** - Comprehensive test coverage with Vitest
+- 📦 **Tree-shakable** - Optimized bundle size with ESM support
 
 ## 📦 Installation
 
 ```bash
-pnpm add @amber-ai/ui
+pnpm add @uglycat/ui
+# or
+npm install @uglycat/ui
+# or
+yarn add @uglycat/ui
 ```
 
 ## 🚀 Quick Start
 
 1. **Install dependencies:**
 ```bash
-pnpm add @amber-ai/ui tailwindcss @radix-ui/react-accordion
+pnpm add @uglycat/ui tailwindcss
 ```
 
-2. **Add to your Tailwind config:**
+2. **Configure Tailwind CSS:**
 ```javascript
 // tailwind.config.js
 module.exports = {
   content: [
-    "./node_modules/@amber-ai/ui/dist/**/*.{js,ts,jsx,tsx}",
-    // ... your other content paths
+    "./node_modules/@uglycat/ui/dist/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      // ... your theme extensions
-    },
+    extend: {},
   },
-  plugins: [
-    require("tailwindcss-animate"),
-    // ... your other plugins
-  ],
+  plugins: [require("tailwindcss-animate")],
 }
 ```
 
-3. **Import and use components:**
+3. **Import styles in your app:**
 ```tsx
-import { Button, Card, Input } from "@amber-ai/ui"
+import "@uglycat/ui/styles"
+```
+
+4. **Use components:**
+```tsx
+import { Button, Card, Input } from "@uglycat/ui"
 
 export function MyComponent() {
   return (
@@ -113,9 +117,9 @@ export function MyComponent() {
 - **Shiny Button** - Shiny animated button
 - **Text Animate** - Text animation effects
 
-## 🎨 Styling
+## 🎨 Theming
 
-Components use CSS variables for theming. You can customize the appearance by overriding these variables:
+Components use CSS variables for theming. Customize by overriding variables:
 
 ```css
 :root {
@@ -123,36 +127,30 @@ Components use CSS variables for theming. You can customize the appearance by ov
   --foreground: 222.2 84% 4.9%;
   --primary: 222.2 47.4% 11.2%;
   --primary-foreground: 210 40% 98%;
-  /* ... more variables */
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
 }
 ```
 
-## 🧪 Testing
-
-```bash
-# Run tests
-pnpm test
-
-# Run tests with UI
-pnpm test:ui
-
-# Type checking
-pnpm type-check
-```
-
-## 🛠️ Development
+## 🧪 Development
 
 ```bash
 # Install dependencies
 pnpm install
 
-# Start development server
-pnpm dev
-
 # Build library
 pnpm build
 
-# Lint code
+# Run tests
+pnpm test
+
+# Type checking
+pnpm type-check
+
+# Lint
 pnpm lint
 ```
 
@@ -161,7 +159,7 @@ pnpm lint
 ```
 src/
 ├── components/
-│   ├── ui/           # Core UI components
+│   ├── ui/           # Core UI components (shadcn/ui)
 │   └── premium/      # Premium animated components
 ├── hooks/            # Custom React hooks
 ├── lib/              # Utility functions
@@ -170,11 +168,14 @@ src/
 
 ## 🤝 Contributing
 
+Contributions are welcome! Please:
+
 1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes with tests
+4. Commit your changes (`git commit -m 'Add amazing feature'`)
+5. Push to the branch (`git push origin feature/amazing-feature`)
+6. Open a Pull Request
 
 ## 📄 License
 
@@ -182,10 +183,14 @@ MIT License - see LICENSE file for details.
 
 ## 🔗 Links
 
-- [Documentation](https://amber-ai-ui.vercel.app)
-- [Storybook](https://amber-ai-ui-storybook.vercel.app)
-- [GitHub](https://github.com/gtamura17/amber-ai-ui)
+- [GitHub Repository](https://github.com/gtamura17/uglycat-ui)
+- [Report Issues](https://github.com/gtamura17/uglycat-ui/issues)
 
-## 🆘 Support
+## 👨‍💻 Author
 
-For support and questions, please open an issue in the repository.
+**Gabriel Tamura**
+- GitHub: [@gtamura17](https://github.com/gtamura17)
+
+---
+
+Built with ❤️ by an ugly cat
