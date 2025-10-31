@@ -96,3 +96,16 @@ Contributions are welcome! Please read our [contributing guidelines](CONTRIBUTIN
 ## License
 
 MIT © [Gabriel Tamura](https://github.com/gtamura17)
+
+---
+
+<div align="center">
+  <p>
+    <a href="https://www.gtamura.com/pt-BR">website</a> (onde construo sobre eu)
+    ·
+    <a href="https://github.com/gtamura17">github</a> (onde construo umas coisa)
+    ·
+    <a href="https://www.linkedin.com/in/gabriel-tamura-mamiya">linkedin</a> (onde falo umas coisa mais formal pq preciso)
+  </p>
+  <p>Built with ❤️ by an ugly cat</p>
+</div>
